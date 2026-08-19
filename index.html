@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#f5f5f5">
+    <title>BouncyWall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <div class="title">BouncyWall</div>
+
+            <button class="info-button" id="infoButton" aria-label="Instructions">
+                i
+            </button>
+
+            <div class="level-text" id="levelText">Level 1</div>
+            <div class="bounce-text" id="bounceText">Bounces: 0 / 1</div>
+        </header>
+
+        <main>
+            <div class="game-wrapper">
+                <canvas id="gameCanvas"></canvas>
+            </div>
+
+            <div class="hint" id="hint">
+                Drag the ball opposite the direction you want it to go
+            </div>
+        </main>
+
+    </div>
+
+
+    <!-- WIN POPUP -->
+    <div class="overlay hidden" id="winOverlay">
+        <div class="popup">
+            <div class="popup-title">Congrats!</div>
+            <div class="popup-message">
+                You reached the hole.
+            </div>
+
+            <button class="primary-button" id="nextButton">
+                Next Level
+            </button>
+        </div>
+    </div>
+
+
+    <!-- LOSE POPUP -->
+    <div class="overlay hidden" id="loseOverlay">
+        <div class="popup">
+            <div class="popup-title">You Lose</div>
+            <div class="popup-message">
+                You went over the maximum number of bounces.
+            </div>
+
+            <button class="primary-button" id="tryAgainButton">
+                Try Again
+            </button>
+        </div>
+    </div>
+
+
+    <!-- INFO POPUP -->
+    <div class="overlay hidden" id="infoOverlay">
+        <div class="popup info-popup">
+            <div class="popup-title">How to Play</div>
+
+            <div class="instructions">
+                <p>
+                    <strong>1.</strong>
+                    Touch the black ball and drag in the opposite direction
+                    to where you want it to travel.
+                </p>
+
+                <p>
+                    <strong>2.</strong>
+                    Release to launch the ball.
+                </p>
+
+                <p>
+                    <strong>3.</strong>
+                    The ball bounces off the outside walls and the obstacle walls.
+                </p>
+
+                <p>
+                    <strong>4.</strong>
+                    Reach the hole using the maximum number of bounces or fewer.
+                </p>
+
+                <p>
+                    For example, if the level says <strong>4 bounces</strong>,
+                    reaching the hole after 0, 1, 2, 3 or 4 bounces is okay.
+                </p>
+
+                <p>
+                    If you go over the maximum, the level is lost.
+                </p>
+
+                <p>
+                    <strong></strong>
+                    If you hit a spike, you die.
+                </p>
+
+                <p>
+                    <strong></strong>
+                    You can teleport through portals.
+                </p>
+
+                <p>
+                    <strong></strong>
+                    Cobwebs slow you down.
+                </p>
+
+                <p>
+                    <strong></strong>
+                    Boosters speed you up.
+                </p>
+            </div>
+
+            <div class="creator">
+                Created by Isaac Engelman
+            </div>
+
+            <button class="secondary-button" id="closeInfoButton">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
